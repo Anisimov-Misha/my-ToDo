@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="shortcut icon" href="./img/free-icon-wish-list-3585145.png" type="image/x-icon">
+   <title>To-Do</title>
+</head>
+<body>
+   <div class="wrapper">
+      <p class="app-title">ToDo App</p>
+      <p class="app-subtitle">to-do list for today</p>
+
+      <main class="main__container container">
+         <!-- <div class="main__empty">
+            <img src="./img/save-nature.svg" alt="#">
+            <p>ToDo list is empty</p>
+         </div> -->
+         <ul class="main__list">
+            <!-- <li id="${newTask.id}" class="main__task task">
+               <p class="task__title">123</p>
+               <div class="task__btns">
+                   <div class="task__btn ready"><img src="./img/tick.svg" alt="#"></div>
+                   <div class="task__btn delete"><img src="./img/cross.svg" alt="#"></div>
+               </div>
+           </li> -->
+         </ul>
+      </main>
+
+      <div class="addTask__container container">
+         <p class="addTask__title">Add new task...</p>
+         <div class="addTask__body">
+            <form id="form">
+               <div class="form-group">
+                  <input type="text" class="form-control" id="taskInput" placeholder="Task text" required>
+                  <small id="emailHelp" class="form-text text-muted">
+                     What we do, how much time we spend, what results we get.
+                  </small>
+               </div>
+               <button type="submit" class="btn btn-primary btn-lg active">Add</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <script src="./js/main.js"></script>
+</body>
+
+</html>

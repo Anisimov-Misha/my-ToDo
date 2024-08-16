@@ -1,0 +1,138 @@
+@import '../scss/null.scss';
+
+body {
+   background-color: blanchedalmond;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 30px;
+}
+.container {
+   max-width: 1200px;
+   width: 100%;
+}
+.app-title {
+   font-size: 60px;
+   font-weight: 700;
+   margin: 0 0 10px 0;
+}
+.app-subtitle {
+   font-size: 24px;
+   margin: 0 0 30px 8px;
+}
+.main__container {
+   min-height: 250px;
+   width: 100%;
+   background-color: white;
+   border: 3px solid rgba(128, 128, 128, 0.3);
+   border-radius: 12px;
+   margin: 0 0 24px 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   .task-done{
+      background-color: rgb(240, 240, 240);
+   }
+   .main__empty {
+      min-height: 250px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      flex-direction: column;
+      img {
+         width: 75px;
+         margin: 0 0 30px 0;
+      }
+   }
+   .main__list {
+      .main__task{
+         display: flex;
+         justify-content: space-between;
+         padding: 8px 20px 8px 20px;
+         border: 1px solid rgba(128, 128, 128, 0.3);
+         border-radius: 10px;
+         margin: 5px;
+         .task__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 700;
+         }
+         .title-done{
+            color: rgba(128, 128, 128);
+            text-decoration: line-through;
+         }
+         .task__btns{
+            display: flex;
+            gap: 15px;
+            .task__btn{
+               background-color: #e0e5ea;
+               padding: 8px 10px;
+               cursor: pointer;
+               border-radius: 4px;
+               transition: opacity 0.2s ease-in;
+               opacity: 0.5;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               &:hover{
+                  opacity: 1;
+               }
+               img{
+                  width: 18px;
+                  height: 18px;
+                  pointer-events: none;
+               }
+            }
+         }
+      }
+   }
+}
+.addTask__container {
+   border: 3px solid rgba(128, 128, 128, 0.3);
+   border-radius: 12px;
+   overflow: hidden;
+   .addTask__title {
+      padding: 15px 15px 15px 25px;
+      background-color: rgb(255, 246, 228);
+      font-size: 16px;
+      color: rgb(73, 73, 73);
+      border-bottom: 3px solid rgba(128, 128, 128, 0.3);
+   }
+   .addTask__body {
+      padding: 20px;
+      background-color: white;
+      form {
+         .form-group {
+            display: flex;
+            flex-direction: column;
+            .form-control {
+               border: 3px solid rgba(128, 128, 128, 0.3);
+               padding: 15px;
+               font-size: 16px;
+               border-radius: 8px;
+               margin: 0 0 10px 0;
+               background-color: rgb(240, 240, 240);
+            }
+            .form-text {
+               margin: 0 0 20px 5px;
+               color: gray;
+            }
+         }
+         .btn {
+            padding: 15px 40px 15px;
+            background-color: rgb(70, 70, 255);
+            color: white;
+            border-radius: 8px;
+            font-size: 20px;
+            outline: 3px solid lightblue;
+         }
+      }
+   }
+}
