@@ -4,11 +4,12 @@ const mainList = document.querySelector('.main__list');
 const form = document.querySelector('#form');
 const taskInput = document.querySelector('#taskInput');
 const clearBtn = document.querySelector('.btn-clear');
+let chekEmptyCounter = 0;
 
 form.addEventListener('submit', addTask);
 mainList.addEventListener('click', deleteTask);
 mainList.addEventListener('click', doneTask);
-clearBtn.addEventListener('click', clearAllTasks)
+clearBtn.addEventListener('click', clearAllTasks);
 
 let tasks = [];
 
@@ -76,19 +77,20 @@ function doneTask (event) {
 }
 
 function chekEmptyList() {
-    if (tasks.length === 0) {
+    if (tasks.length === 0 && chekEmptyCounter === 0) {
         const emptyList = 
         `<div class="main__empty">
             <img src="./img/save-nature.svg" alt="#">
             <p>ToDo list is empty</p>
         </div>`;
         mainContainer.insertAdjacentHTML('afterbegin', emptyList);
+        chekEmptyCounter = 1;
     } 
-
     if (tasks.length > 0) {
         mainContainer.style.justifyContent = 'start';
         const mainEmpty = document.querySelector('.main__empty');
         if (mainEmpty) mainEmpty.remove();
+        chekEmptyCounter = 0;
     }
 }
 
