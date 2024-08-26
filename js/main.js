@@ -122,4 +122,3 @@ function clearAllTasks(event){
         chekEmptyList();
     }
 }
-
