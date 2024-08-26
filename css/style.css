@@ -157,12 +157,14 @@ body {
   margin: 5px;
 }
 .main__container .main__list .main__task .task__title {
+  max-width: 950px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -243,11 +245,28 @@ body {
   margin: 0 0 20px 5px;
   color: gray;
 }
-.addTask__container .addTask__body form .btn {
-  padding: 15px 40px 15px;
+.addTask__container .addTask__body form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.addTask__container .addTask__body form .buttons .btn {
+  padding: 15px 40px;
   background-color: rgb(70, 70, 255);
   color: white;
   border-radius: 8px;
   font-size: 20px;
   outline: 3px solid lightblue;
+}
+@media (max-width: 500px) {
+  .addTask__container .addTask__body form .buttons .btn {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+.addTask__container .addTask__body form .buttons .btn-clear {
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */

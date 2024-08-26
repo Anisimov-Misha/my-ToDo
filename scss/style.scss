@@ -58,8 +58,10 @@ body {
          border-radius: 10px;
          margin: 5px;
          .task__title{
+            max-width: 950px;
+            overflow: hidden;
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             font-size: 16px;
             font-weight: 700;
@@ -125,13 +127,24 @@ body {
                color: gray;
             }
          }
-         .btn {
-            padding: 15px 40px 15px;
-            background-color: rgb(70, 70, 255);
-            color: white;
-            border-radius: 8px;
-            font-size: 20px;
-            outline: 3px solid lightblue;
+         .buttons{
+            display: flex;
+            justify-content: space-between;
+            .btn {
+               padding: 15px 40px;
+               background-color: rgb(70, 70, 255);
+               color: white;
+               border-radius: 8px;
+               font-size: 20px;
+               outline: 3px solid lightblue;
+               @media (max-width: 500px) {
+                  padding: 8px 20px;
+                  font-size: 16px;
+               }
+            }
+            .btn-clear{
+               background-color: green;
+            }
          }
       }
    }

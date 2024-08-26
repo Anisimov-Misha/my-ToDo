@@ -3,10 +3,12 @@ const mainEmpty = document.querySelector('.main__empty');
 const mainList = document.querySelector('.main__list');
 const form = document.querySelector('#form');
 const taskInput = document.querySelector('#taskInput');
+const clearBtn = document.querySelector('.btn-clear');
 
 form.addEventListener('submit', addTask);
 mainList.addEventListener('click', deleteTask);
 mainList.addEventListener('click', doneTask);
+clearBtn.addEventListener('click', clearAllTasks)
 
 let tasks = [];
 
@@ -109,3 +111,13 @@ function addLiHTML(task) {
 
     mainList.insertAdjacentHTML('beforeend', taskHTML);
 }
+
+function clearAllTasks(event){
+    if (event.target.classList.contains('btn-clear')) {
+        mainList.innerHTML = '';
+        localStorage.removeItem('tasks');
+        tasks = [];
+        chekEmptyList();
+    }
+}
+
